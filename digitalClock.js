@@ -14,9 +14,15 @@ const Mytime =() => {
 		session = "PM";
 	}
 	
+	hours = (hours < 10) ? "0" + hours : hours;
+	
+	seconds= (seconds < 10) ? "0" + seconds : seconds;
+	
 	let time = hours + ":" + minutes + ":" + seconds + " " + session;
 	
 	document.getElementById("showTime").innerHTML = time;
+	
+	setTimeout(Mytime, 1000);
 }
 
 Mytime();
